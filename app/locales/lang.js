@@ -18,7 +18,7 @@ function(de, en, zh, es, fr, nl, ru, handlebars) {
 	};
 
 	var lang = window.navigator.language || window.navigator.userLanguage;
-	var result = langs[lang.split('-')[0]] || langs.zh;
+	var result = langs.zh;//langs[lang.split('-')[0]] || langs.zh;
 	handlebars.registerHelper("lang", function(key) {
 		return result[key];
 	});
